@@ -34,7 +34,7 @@ int main(int argc, const char * argv[])
             NSLog(@"%@ pizza", inputString);
             
             // Take the first word of the command as the size, and the rest as the toppings
-            NSArray *commandWords = [inputString componentsSeparatedByString:@" "];
+            NSMutableArray *commandWords = [inputString componentsSeparatedByString:@" "];
             
             NSString *size = [commandWords firstObject];
             [commandWords removeObjectAtIndex:0];

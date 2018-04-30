@@ -10,7 +10,7 @@
 
 @implementation Pizza
 
-- (instancetype) initWithSize: (NSString *)size AndToppings: (NSArray *)toppings {
+- (instancetype) initWithSize: (PizzaSize)size AndToppings: (NSArray *)toppings {
     self = [super init];
     if(self) {
         self.size = size;

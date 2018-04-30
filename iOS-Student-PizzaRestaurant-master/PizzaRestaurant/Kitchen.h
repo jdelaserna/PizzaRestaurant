@@ -2,8 +2,8 @@
 //  Kitchen.h
 //  PizzaRestaurant
 //
-//  Created by Steven Masuch on 2014-07-19.
-//  Copyright (c) 2014 Lighthouse Labs. All rights reserved.
+//  Created by Jorge Serna on 2018-04-26.
+//  Copyright © 2018 Lighthouse Labs. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
