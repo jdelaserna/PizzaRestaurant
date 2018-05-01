@@ -2,29 +2,50 @@
 //  main.m
 //  PizzaRestaurant
 //
-//  Created by Steven Masuch on 2014-07-19.
-//  Copyright (c) 2014 Lighthouse Labs. All rights reserved.
+//  Created by Jorge Serna on 2018-04-30.
+//  Copyright © 2018 Lighthouse Labs. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 #import "Kitchen.h"
-#import "Pizza.h"
+#import "Manager.h"
+#import "CheeryManager.h"
+#import "DeliveryService.h"
 
-int main(int argc, const char * argv[])
-{
+int main(int argc, const char * argv[]) {
 
     @autoreleasepool {
         
-        NSLog(@"Please pick your pizza size and toppings:");
-        
         Kitchen *restaurantKitchen = [Kitchen new];
-        Pizza *newPizza = [[Pizza alloc] init];
+        Manager *badManager = nil;
+        CheeryManager *goodManager = nil;
+        DeliveryService *deliveryServce = [DeliveryService new];
         
         while (TRUE) {
-            // Loop forever
             
-            NSLog(@"> ");
+            NSLog(@"Which manager would you like? \na. Bad Manager \nb. Good Manager \nc. None \nPick your choice:");
+            char manager[100];
+            fgets(manager, 100, stdin);
+            
+            NSString *managerChoice = [[NSString alloc] initWithUTF8String:manager];
+            
+            if ([managerChoice characterAtIndex:0] == 'a') {
+                if (badManager == nil) {
+                    badManager = [Manager new];
+                }
+                restaurantKitchen.kitchenDelegate = badManager;
+            } else if ([managerChoice characterAtIndex:0] == 'b') {
+                if (goodManager == nil) {
+                    goodManager = [CheeryManager new];
+                    goodManager.deliveryService = deliveryServce;
+                }
+                restaurantKitchen.kitchenDelegate = goodManager;
+            } else {
+                restaurantKitchen.kitchenDelegate = nil;
+            }
+            
+            NSLog(@"Please pick your pizza size and toppings:");
             char str[100];
             fgets (str, 100, stdin);
             
@@ -33,18 +54,34 @@ int main(int argc, const char * argv[])
             
             NSLog(@"%@ pizza", inputString);
             
-            // Take the first word of the command as the size, and the rest as the toppings
-            NSMutableArray *commandWords = [inputString componentsSeparatedByString:@" "];
+            NSMutableArray *toppings = [inputString componentsSeparatedByString:@" "];
             
-            NSString *size = [commandWords firstObject];
-            [commandWords removeObjectAtIndex:0];
+            NSString *firstIndex = [toppings firstObject];
+            [toppings removeObjectAtIndex:0];
             
-            // And then send some message to the kitchen...
-            [newPizza initWithSize:size AndToppings:(commandWords)];
+            PizzaSize size = large;
+            
+            if ([firstIndex isEqualToString: @"small"]) {
+                size = small;
+            } else if ([firstIndex isEqualToString:@"medium"]) {
+                size  = medium;
+            }
+                
+            Pizza* newPizza = [restaurantKitchen makePizzaWithSize:(size) toppings:(toppings)];
+            if (newPizza) {
+                NSLog(@"Size %i", (int)newPizza.size);
+                NSLog(@"Toppings %@", toppings);
+            } else {
+                NSLog(@"No Pizza was created");
+            }
+            
+            NSMutableArray *resultPizza = [deliveryServce deliveredPizzaDescription];
+            NSLog(@" HOLA %@", resultPizza);
 
         }
 
     }
+    
     return 0;
 }
 

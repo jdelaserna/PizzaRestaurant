@@ -11,6 +11,11 @@
 		6001EC90197B502F00F97011 /* Kitchen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC8F197B502F00F97011 /* Kitchen.m */; };
 		6F23C9FE209298E300AC6D08 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23C9FD209298E300AC6D08 /* Pizza.m */; };
 		6F23CA0120929CA000AC6D08 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23C9FF20929CA000AC6D08 /* InputCollector.m */; };
+		6F23CA052097C48300AC6D08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23CA042097C48300AC6D08 /* main.m */; };
+		6F23CA082097DEB800AC6D08 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23CA072097DEB800AC6D08 /* Manager.m */; };
+		6F23CA0B2097E03A00AC6D08 /* CheeryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23CA0A2097E03A00AC6D08 /* CheeryManager.m */; };
+		6F23CA0E2097E22A00AC6D08 /* DeliveryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23CA0D2097E22A00AC6D08 /* DeliveryService.m */; };
+		6F23CA112097E23A00AC6D08 /* DeliveryCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23CA102097E23A00AC6D08 /* DeliveryCar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +41,15 @@
 		6F23C9FF20929CA000AC6D08 /* InputCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCollector.m; sourceTree = "<group>"; };
 		6F23CA0020929CA000AC6D08 /* InputCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCollector.h; sourceTree = "<group>"; };
 		6F23CA032092A88E00AC6D08 /* KitchenDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KitchenDelegate.h; sourceTree = "<group>"; };
+		6F23CA042097C48300AC6D08 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6F23CA062097DEB800AC6D08 /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		6F23CA072097DEB800AC6D08 /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
+		6F23CA092097E03A00AC6D08 /* CheeryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheeryManager.h; sourceTree = "<group>"; };
+		6F23CA0A2097E03A00AC6D08 /* CheeryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheeryManager.m; sourceTree = "<group>"; };
+		6F23CA0C2097E22A00AC6D08 /* DeliveryService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryService.h; sourceTree = "<group>"; };
+		6F23CA0D2097E22A00AC6D08 /* DeliveryService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryService.m; sourceTree = "<group>"; };
+		6F23CA0F2097E23A00AC6D08 /* DeliveryCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryCar.h; sourceTree = "<group>"; };
+		6F23CA102097E23A00AC6D08 /* DeliveryCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryCar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +92,16 @@
 		6001EC82197B4EC300F97011 /* PizzaRestaurant */ = {
 			isa = PBXGroup;
 			children = (
+				6F23CA042097C48300AC6D08 /* main.m */,
+				6F23CA0C2097E22A00AC6D08 /* DeliveryService.h */,
+				6F23CA0D2097E22A00AC6D08 /* DeliveryService.m */,
+				6F23CA0F2097E23A00AC6D08 /* DeliveryCar.h */,
+				6F23CA102097E23A00AC6D08 /* DeliveryCar.m */,
 				6001EC8E197B502F00F97011 /* Kitchen.h */,
+				6F23CA062097DEB800AC6D08 /* Manager.h */,
+				6F23CA072097DEB800AC6D08 /* Manager.m */,
+				6F23CA092097E03A00AC6D08 /* CheeryManager.h */,
+				6F23CA0A2097E03A00AC6D08 /* CheeryManager.m */,
 				6F23CA032092A88E00AC6D08 /* KitchenDelegate.h */,
 				6F23C9FC209298E300AC6D08 /* Pizza.h */,
 				6F23C9FD209298E300AC6D08 /* Pizza.m */,
@@ -151,6 +174,11 @@
 			files = (
 				6F23C9FE209298E300AC6D08 /* Pizza.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
+				6F23CA112097E23A00AC6D08 /* DeliveryCar.m in Sources */,
+				6F23CA052097C48300AC6D08 /* main.m in Sources */,
+				6F23CA0E2097E22A00AC6D08 /* DeliveryService.m in Sources */,
+				6F23CA0B2097E03A00AC6D08 /* CheeryManager.m in Sources */,
+				6F23CA082097DEB800AC6D08 /* Manager.m in Sources */,
 				6F23CA0120929CA000AC6D08 /* InputCollector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
